@@ -1,0 +1,23 @@
+language: node_js
+
+node_js:
+  - 'node'
+  - '10'
+
+branches:
+  only:
+  - master
+  - /release\/.*/
+  - develop
+
+install:
+  - npm install
+
+cache:
+  directories:
+    - node_modules
+
+script:
+  - npm run lint
+  - npm run test-headless  
+  - npm run build --prod
