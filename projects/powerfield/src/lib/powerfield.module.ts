@@ -8,6 +8,7 @@ import { AutowidthDirective } from './autowidth/autowidth.directive';
   ],
   imports: [],
   exports: [
+    AutowidthDirective
   ]
 })
 export class PowerfieldModule { }
