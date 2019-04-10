@@ -13,7 +13,8 @@ class MockComponent {
 
 describe('AutowidthDirective', () => {
   let component: MockComponent;
-  let fixture: ComponentFixture<MockComponent>;
+  let debugEl: DebugElement;
+  let input: HTMLInputElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -25,9 +26,12 @@ describe('AutowidthDirective', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MockComponent);
+    const fixture: ComponentFixture<MockComponent> = TestBed.createComponent(MockComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
+
+    debugEl = fixture.debugElement.query(By.css('input'));
+    input = debugEl.nativeElement;
   });
 
   it('should create component', () => {
@@ -35,9 +39,6 @@ describe('AutowidthDirective', () => {
   });
 
   it('should expand component', () => {
-    const debugEl: DebugElement = fixture.debugElement.query(By.css('input'));
-    const input: HTMLInputElement = debugEl.nativeElement;
-
     const initialWidth: number = input.getBoundingClientRect().width;
     input.value = 'Adding some text';
     debugEl.triggerEventHandler('input', {
@@ -49,9 +50,6 @@ describe('AutowidthDirective', () => {
   });
 
   it('should shrink component', () => {
-    const debugEl: DebugElement = fixture.debugElement.query(By.css('input'));
-    const input: HTMLInputElement = debugEl.nativeElement;
-
     input.value = 'Adding some text';
     debugEl.triggerEventHandler('input', {
       target: input
