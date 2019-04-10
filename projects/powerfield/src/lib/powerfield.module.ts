@@ -1,8 +1,13 @@
 import { NgModule } from '@angular/core';
 
+import { AutowidthDirective } from './autowidth/autowidth.directive';
+
 @NgModule({
-  declarations: [],
+  declarations: [
+    AutowidthDirective
+  ],
   imports: [],
-  exports: []
+  exports: [
+  ]
 })
 export class PowerfieldModule { }
