@@ -25,7 +25,6 @@ export class AutowidthDirective implements AfterContentChecked, OnDestroy, OnIni
 
   constructor(el: ElementRef, public renderer: Renderer2) {
     this.input = el.nativeElement as HTMLInputElement;
-    // TODO: manage error if not an input
   }
 
   ngAfterContentChecked(): void {
