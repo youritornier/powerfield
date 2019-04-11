@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { MediaMatcher } from '@angular/cdk/layout';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-layout',
@@ -6,7 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./layout.component.scss']
 })
 export class LayoutComponent implements OnInit {
-  constructor() { }
+  private mediaQueryListener: () => void;
 
-  ngOnInit() { }
+  public mediaQuery: MediaQueryList;
+
+  constructor(
+    changeDetectorRef: ChangeDetectorRef,
+    media: MediaMatcher
+  ) {
+    this.mediaQueryListener = () => changeDetectorRef.detectChanges();
+    this.mediaQuery = media.matchMedia('(max-width: 990px)');
+  }
+
+  ngOnInit() {
+    this.mediaQuery.addListener(this.mediaQueryListener);
+  }
 }

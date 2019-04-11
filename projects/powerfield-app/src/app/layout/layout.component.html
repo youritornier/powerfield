@@ -1,1 +1,30 @@
-<router-outlet></router-outlet>
+<mat-toolbar color="primary" class="layout-toolbar">
+  <button
+    mat-icon-button
+    (click)="sidenav.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+</mat-toolbar>
+
+<mat-sidenav-container class="layout-sidenav-container">
+  <mat-sidenav #sidenav
+    [mode]="mediaQuery.matches ? 'over' : 'side'"
+    [opened]="!mediaQuery.matches"
+    class="layout-sidenav collapsed">
+    <mat-nav-list>
+      <div>test</div>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <main class="layout-sidenav-content">
+      <div class="content">
+        <router-outlet></router-outlet>
+      </div>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<footer class="layout-footer">
+  Footer
+</footer>
