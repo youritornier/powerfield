@@ -14,11 +14,11 @@ import {
 })
 export class AutowidthDirective implements AfterContentChecked, OnDestroy, OnInit {
   // Width (in px) to add to the input's width content
-  @Input() autowidthExtra = 0;
+  @Input() powExtraWidth = 0;
   // Maximal input's width
-  @Input() autowidthMax = 0;
+  @Input() powMaxWidth = 0;
   // Minimal input's width
-  @Input() autowidthMin = 0;
+  @Input() powMinWidth = 0;
 
   private input: HTMLInputElement;
   private twin: HTMLSpanElement;
@@ -87,8 +87,8 @@ export class AutowidthDirective implements AfterContentChecked, OnDestroy, OnIni
     this.twin.append(document.createTextNode(value));
 
     let newWidth = this.twin.getBoundingClientRect().width;
-    if (this.autowidthExtra > 0) {
-      newWidth += this.autowidthExtra;
+    if (this.powExtraWidth > 0) {
+      newWidth += this.powExtraWidth;
     }
     this.setWidth(newWidth);
   }
@@ -116,20 +116,20 @@ export class AutowidthDirective implements AfterContentChecked, OnDestroy, OnIni
   }
 
   /**
-   * Sets the max-width of the input based on autowidthMax.
+   * Sets the max-width of the input based on powMaxWidth.
    */
   private setMaxWidth(): void {
-    if (this.autowidthMax > 0) {
-      this.renderer.setStyle(this.input, 'max-width', `${this.autowidthMax}px`);
+    if (this.powMaxWidth > 0) {
+      this.renderer.setStyle(this.input, 'max-width', `${this.powMaxWidth}px`);
     }
   }
 
   /**
-   * Sets the min-width of the input based on autowidthMin.
+   * Sets the min-width of the input based on powMinWidth.
    */
   private setMinWidth(): void {
-    if (this.autowidthMin > 0) {
-      this.renderer.setStyle(this.input, 'min-width', `${this.autowidthMin}px`);
+    if (this.powMinWidth > 0) {
+      this.renderer.setStyle(this.input, 'min-width', `${this.powMinWidth}px`);
     }
   }
 
