@@ -1,0 +1,56 @@
+@import "../../styles/variables.scss";
+
+.layout {
+  &-toolbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.3);
+  }
+
+  &-sidenav {
+    position: fixed;
+    top: 56px;
+    bottom: 0;
+    left: 0;
+    padding: 0;
+    min-width: 260px;
+    background-color: $very-light-grey;
+    box-shadow: 6px 0 6px rgba(0,0,0,.1);
+
+    @media (min-width: $small-screen) {
+      top: 64px;
+    }
+
+    &-container {
+      height: auto!important;
+      max-width: 100%;
+      margin: 0;
+      transform: none;
+    }
+
+    &-content {
+      @media (min-width: $small-screen) {
+        min-height: calc(100vh - (64px + (80px - 64px) + 1rem + 120px));
+        padding: 80px 3rem 1rem;
+      }
+      min-height: calc(100vh - (56px + (70px - 56px) + 1rem + 120px));
+      padding: 70px 1rem 1rem;
+    }
+  }
+
+  &-footer {
+    position: relative;
+    line-height: 24px;
+    flex: 1;
+    padding: 48px;
+    z-index: 0;
+    background-color: $primary;
+    color: $very-light-grey;
+    font-weight: 300;
+    text-align: center;
+  }
+}
+
