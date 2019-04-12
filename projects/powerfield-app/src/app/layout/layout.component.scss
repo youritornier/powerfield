@@ -8,6 +8,27 @@
     left: 0;
     z-index: 10;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,.3);
+    padding: 0 16px 0 0;
+
+    &-link {
+      font-size: 16px;
+      font-weight: 400;
+      color: #ffffff;
+      text-transform: uppercase;
+      padding: 24px 0;
+
+      &.home {
+        margin: 0 16px 0 0;
+        padding: 21px 0;
+      }
+    }
+
+    &-button {
+      margin: 0 8px 0 0;
+      height: 100%;
+      padding: 0;
+      width: 64px;
+    }
   }
 
   &-sidenav {
@@ -22,6 +43,64 @@
 
     @media (min-width: $small-screen) {
       top: 64px;
+    }
+
+    &-link {
+      margin-left: 0!important;
+      padding-left: 6px!important;
+      box-sizing: border-box;
+
+      &:hover,
+      &-active {
+        color: $primary!important;
+      }
+
+      &.level-1 {
+        font-size: 14px!important;
+        font-weight: 400;
+        margin-left: 14px;
+        transition: background-color .2s;
+        text-transform: uppercase;
+      }
+
+      &.level-2 {
+        color: #6e6e6e;
+        font-size: 14px!important;
+        font-weight: 400;
+        margin-left: 12px;
+        text-transform: none;
+      }
+    }
+
+    &-expansion {
+      background: transparent;
+      border: none;
+      box-shadow: none;
+      border-radius: unset;
+
+      &-header {
+        font-size: 14px;
+        font-weight: 400;
+        color: #ffffff;
+        text-transform: uppercase;
+        padding-left: 22px;
+        padding-right: 16px;
+
+        &:hover {
+          .mat-expansion-panel-header-title {
+            color: $primary;
+          }
+  
+          ::ng-deep .mat-expansion-indicator:after {
+            color: $primary;
+          }
+        }
+      }
+
+      ::ng-deep .mat-expansion-panel-body {
+        padding-right: 0;
+        padding-bottom: 0;
+      }
     }
 
     &-container {
@@ -53,4 +132,3 @@
     text-align: center;
   }
 }
-
