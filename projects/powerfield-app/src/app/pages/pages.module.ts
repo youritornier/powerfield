@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { PowerfieldModule } from 'powerfield';
 
 import { AppRoutingModule } from '../app-routing.module';
 import { ComponentsModule } from '../components/components.module';
@@ -20,7 +21,8 @@ import { QuickstartComponent } from './quickstart/quickstart.component';
     AppRoutingModule,
     CommonModule,
     MaterialModule,
-    ComponentsModule
+    ComponentsModule,
+    PowerfieldModule
   ],
   exports: [
     AutowidthComponent,

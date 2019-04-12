@@ -1,3 +1,46 @@
-<p>
-  autowidth works!
-</p>
+<mat-tab-group>
+  <mat-tab label="Overview" i18n-label="@@tab.label.overview">
+  </mat-tab>
+
+  <mat-tab label="Api" i18n-label="@@tab.label.api">
+    <h2>API reference for Powerfield Autowidth directive</h2>
+
+    <h3>powAutowidth</h3>
+    <p i18n="@@paragraph.autowidth.description">
+      The Autowidth Powerfield directive automatically adjusts a text input's width to its content.
+    </p>
+
+    <h4>Properties</h4>
+    <table class="api-table">
+      <thead>
+        <tr>
+          <th i18n="@@api.table.name">Name</th>
+          <th i18n="@@api.table.description">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>@Input() powExtraWidth: number</code></td>
+          <td i18n="@@api.autowidth.powExtraWidth">
+            Extra space added to the input's width (in pixel).
+          </td>
+        </tr>
+        <tr>
+          <td><code>@Input() powMaxWidth: number</code></td>
+          <td i18n="@@api.autowidth.powMaxWidth">
+            Maximum size of the input (in pixel). If maximum size is 0, it is ignored.
+          </td>
+        </tr>
+        <tr>
+          <td><code>@Input() powMinWidth: number</code></td>
+          <td i18n="@@api.autowidth.powMinWidth">
+            Minimum size of the input (in pixel). If minimum size is 0, it is ignored.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </mat-tab>
+
+  <mat-tab label="Examples" i18n-label="@@tab.label.examples">
+  </mat-tab>
+</mat-tab-group>
