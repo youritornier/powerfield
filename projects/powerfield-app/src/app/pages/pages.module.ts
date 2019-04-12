@@ -5,11 +5,13 @@ import { AppRoutingModule } from '../app-routing.module';
 import { ComponentsModule } from '../components/components.module';
 import { MaterialModule } from '../material/material.module';
 import { HomeComponent } from './home/home.component';
+import { QuickstartComponent } from './quickstart/quickstart.component';
 
 
 @NgModule({
   declarations: [
-    HomeComponent
+    HomeComponent,
+    QuickstartComponent
   ],
   imports: [
     AppRoutingModule,
@@ -18,7 +20,8 @@ import { HomeComponent } from './home/home.component';
     ComponentsModule
   ],
   exports: [
-    HomeComponent
+    HomeComponent,
+    QuickstartComponent
   ],
   providers: []
 })
