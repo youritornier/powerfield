@@ -1,5 +1,68 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./variables.scss";
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 a { text-decoration: none; }
+
+h1 {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 500;
+  margin: 8px 0;
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: 500;
+  margin: 32px 0 24px;
+  clear: both;
+}
+
+a, input, li, ol, p, ul {
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: .3px;
+  font-weight: 400;
+}
+
+p {
+  margin: 14px 0 0;
+}
+
+code {
+  font-family: "Droid Sans Mono",monospace;
+  font-size: 90%;
+}
+
+pre {
+  display: flex;
+  min-height: 32px;
+  margin: 16px 24px;
+  white-space: pre-wrap;
+  align-items: center;
+}
+
+.content {
+  a {
+    color: $primary;
+
+    &:hover {
+      color: #6e6e6e;
+    }
+  }
+}
+
+.code-snippet {
+  background-color: rgba(241,241,241,.2);
+  border: .5px solid #dbdbdb;
+  border-radius: 5px;
+  color: #333;
+  margin: 16px auto;
+  padding: 16px 24px;
+
+  &.language-shell {
+    background: #333;
+    color: #17ff0b;
+  }
+}

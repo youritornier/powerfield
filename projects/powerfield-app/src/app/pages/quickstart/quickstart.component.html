@@ -1,3 +1,49 @@
-<p>
-  quickstart works!
+<h1 i18n="@@title.quickstart.quickstart">Getting started</h1>
+<p i18n="@@paragraph.quickstart.welcome">
+  Welcome to Powerfield! Powerfield helps you with common needed Angular input directives.
 </p>
+<p i18n="@@paragraph.quickstart.quickstart">
+  This guide shows you how to start using Powerfield in your Angular projects.
+</p>
+
+<h2 i18n="@@title.quickstart.prerequisites">Prerequisites</h2>
+<p i18n="@@paragraph.quickstart.prerequisites">
+  TODO: write prerequisites
+</p>
+
+<h2 i18n="@@title.quickstart.step1">Step 1: Install the Powerfield package</h2>
+<p i18n="@@paragraph.quickstart.step1">
+  To install the Powerfield package in your project using <code>npm</code>, open a terminal/console window and enter the following command:
+</p>
+<pre class="code-snippet language-shell">
+  <code>npm install powerfield</code>
+</pre>
+
+<h2 i18n="@@title.quickstart.step2">Step 2: Import Powerfield to your module</h2>
+<p i18n="@@paragraph.quickstart.step2">
+  To import the installed package to your module, open your module file and edit it as follow:
+</p>
+<pre class="code-snippet language-typescript">
+  <code>import &#123; PowerfieldModule &#125; from 'powerfield';
+
+@NgModule(&#123;
+  ...
+  imports: [
+    ...
+    PowerfieldModule,
+  ],
+  ...
+&#125;)
+...</code>
+</pre>
+
+<h2 i18n="@@title.quickstart.nextSteps">Next steps</h2>
+<p i18n="@@param.quickstart.nextSteps">
+  Now that you've installed and imported Powerfield, you can use every provided directives directly in your component templates.
+</p>
+<p i18n="@@param.quickstart.example">
+  For example, you can use the <code>powAutowidth</code> directive as follow:
+</p>
+<pre class="code-snippet language-html">
+  <code>&lt;input type=&quot;text&quot; powAutowidth [powExtraWidth]=&quot;20&quot; /&gt;</code>
+</pre>
