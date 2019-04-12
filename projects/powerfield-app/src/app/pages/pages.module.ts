@@ -5,12 +5,13 @@ import { AppRoutingModule } from '../app-routing.module';
 import { ComponentsModule } from '../components/components.module';
 import { MaterialModule } from '../material/material.module';
 import { HomeComponent } from './home/home.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { QuickstartComponent } from './quickstart/quickstart.component';
-
 
 @NgModule({
   declarations: [
     HomeComponent,
+    PageNotFoundComponent,
     QuickstartComponent
   ],
   imports: [
@@ -21,6 +22,7 @@ import { QuickstartComponent } from './quickstart/quickstart.component';
   ],
   exports: [
     HomeComponent,
+    PageNotFoundComponent,
     QuickstartComponent
   ],
   providers: []
