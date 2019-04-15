@@ -1,16 +1,18 @@
 <div class="code-example-wrapper">
   <div class="code-example-header">
-    <div class="code-example-header-title">{{ exampleTitle }}</div>
+    <div class="code-example-header-title">{{ example.title }}</div>
     <button mat-icon-button (click)="toggleShowSource()">
       <mat-icon>code</mat-icon>
     </button>
   </div>
 
   <div *ngIf="showSource" class="code-example-source">
-    <ng-content select="[source]"></ng-content>
+    <pre source class="code-snippet language-html">
+      <code>{{ example.code }}</code>
+    </pre>
   </div>
 
   <div class="code-example-body">
-    <ng-content select="[body]"></ng-content>
+    <!-- <input type="text" powAutowidth placeholder="Your content" /> -->
   </div>
 </div>

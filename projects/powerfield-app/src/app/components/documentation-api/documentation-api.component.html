@@ -1,0 +1,17 @@
+<h2>API reference for Powerfield {{ documentation.directiveName }} directive</h2>
+
+<h3>{{ documentation.directiveSelector }}</h3>
+<p>{{ documentation.description }}</p>
+
+<h4>Properties</h4>
+<table class="api-table">
+  <thead>
+    <tr><th>Name</th><th>Description</th></tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let property of documentation.properties">
+      <td><code>{{ property.name }}</code></td>
+      <td>{{ property.description }}</td>
+    </tr>
+  </tbody>
+</table>
