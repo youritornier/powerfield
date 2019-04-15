@@ -42,5 +42,25 @@
   </mat-tab>
 
   <mat-tab label="Examples" i18n-label="@@tab.label.examples">
+    <app-code-example exampleTitle="Basic Autowidth" i18n-exampleTitle="@@example.autowidth.basic">
+      <pre source class="code-snippet language-html">
+        <code>&lt;input type=&quot;text&quot; powAutowidth placeholder=&quot;Your content&quot; /&gt;</code>
+      </pre>
+      <div body><input type="text" powAutowidth placeholder="Your content" /></div>
+    </app-code-example>
+
+    <app-code-example exampleTitle="Extra Autowidth" i18n-exampleTitle="@@example.autowidth.extra">
+      <pre source class="code-snippet language-html">
+        <code>&lt;input type=&quot;text&quot; powAutowidth [powExtraWidth]=&quot;20&quot; placeholder=&quot;Your content&quot; /&gt;</code>
+      </pre>
+      <div body><input type="text" powAutowidth  [powExtraWidth]="20" placeholder="Your content" /></div>
+    </app-code-example>
+
+    <app-code-example exampleTitle="Min & max Autowidth" i18n-exampleTitle="@@example.autowidth.minmax">
+      <pre source class="code-snippet language-html">
+        <code>&lt;input type=&quot;text&quot; powAutowidth [powMaxWidth]=&quot;100&quot; [powMinWidth]=&quot;30&quot; /&gt;</code>
+      </pre>
+      <div body><input type="text" powAutowidth  [powMaxWidth]="100" [powMinWidth]="30" /></div>
+    </app-code-example>
   </mat-tab>
 </mat-tab-group>
