@@ -3,15 +3,13 @@
     mat-icon-button
     (click)="sidenav.toggle()"
     title="Menu"
-    class="layout-toolbar-button"
-    i18n-title="@@title.menu">
+    class="layout-toolbar-button">
     <mat-icon>menu</mat-icon>
   </button>
   <a
     routerLink="/"
     title="Home"
-    class="layout-toolbar-link home"
-    i18n-title="@@title.home">
+    class="layout-toolbar-link home">
     Powerfield
   </a>
 </mat-toolbar>
@@ -27,8 +25,7 @@
         routerLink="quickstart"
         routerLinkActive="layout-sidenav-link-active"
         [routerLinkActiveOptions]="{exact: true}"
-        class="layout-sidenav-link level-1"
-        i18n="@@menu.quickstart">
+        class="layout-sidenav-link level-1">
         Getting started
       </a>
 
@@ -38,7 +35,7 @@
             collapsedHeight="48px"
             expandedHeight="48px"
             class="layout-sidenav-expansion-header">
-            <mat-panel-title i18n="@@menu.input">
+            <mat-panel-title>
               Input
             </mat-panel-title>
           </mat-expansion-panel-header>
@@ -48,8 +45,7 @@
             routerLink="input/autowidth"
             routerLinkActive="layout-sidenav-link-active"
             [routerLinkActiveOptions]="{exact: true}"
-            class="layout-sidenav-link level-2"
-            i18n="@@menu.input.autowidth">
+            class="layout-sidenav-link level-2">
             Autowidth
           </a>
         </mat-expansion-panel>
