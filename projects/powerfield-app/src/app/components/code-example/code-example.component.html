@@ -1,0 +1,16 @@
+<div class="code-example-wrapper">
+  <div class="code-example-header">
+    <div class="code-example-header-title">{{ exampleTitle }}</div>
+    <button mat-icon-button (click)="toggleShowSource()">
+      <mat-icon>code</mat-icon>
+    </button>
+  </div>
+
+  <div *ngIf="showSource" class="code-example-source">
+    <ng-content select="[source]"></ng-content>
+  </div>
+
+  <div class="code-example-body">
+    <ng-content select="[body]"></ng-content>
+  </div>
+</div>
