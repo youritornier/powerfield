@@ -1,19 +1,27 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { PowerfieldModule } from 'powerfield';
 
 import { MaterialModule } from '../material/material.module';
-import { CodeExampleComponent } from './code-example/code-example.component';
+import { DocumentationApiComponent } from './documentation-api/documentation-api.component';
+import { DocumentationExampleComponent } from './documentation-example/documentation-example.component';
+import { DocumentationTabComponent } from './documentation-tab/documentation-tab.component';
 
 @NgModule({
   declarations: [
-    CodeExampleComponent
+    DocumentationApiComponent,
+    DocumentationExampleComponent,
+    DocumentationTabComponent
   ],
   imports: [
     CommonModule,
-    MaterialModule
+    MaterialModule,
+    PowerfieldModule
   ],
   exports: [
-    CodeExampleComponent
+    DocumentationApiComponent,
+    DocumentationExampleComponent,
+    DocumentationTabComponent
   ],
   providers: []
 })
