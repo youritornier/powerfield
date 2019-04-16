@@ -62,7 +62,7 @@
 
           <a
             mat-list-item
-            routerLink="docs/{{ d.type }}/{{ name }}"
+            routerLink="docs/{{ d.type | lowercase }}/{{ name | lowercase }}"
             routerLinkActive="layout-sidenav-link-active"
             [routerLinkActiveOptions]="{exact: true}"
             *ngFor="let name of d.names"
