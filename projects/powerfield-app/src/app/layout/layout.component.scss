@@ -21,6 +21,20 @@
         margin: 0 16px 0 0;
         padding: 21px 0;
       }
+
+      &.github {
+        display: flex;
+        flex: 1;
+        justify-content: flex-end;
+        margin: 0 16px 0 0;
+        padding: 16px 0;
+        font-size: 14px;
+        text-transform: none;
+
+        img {
+          margin-right: 5px;
+        }
+      }
     }
 
     &-button {
@@ -112,10 +126,10 @@
 
     &-content {
       @media (min-width: $small-screen) {
-        min-height: calc(100vh - (64px + (80px - 64px) + 1rem + 120px));
+        min-height: calc(100vh - (64px + (80px - 64px) + 1rem + 64px));
         padding: 80px 3rem 1rem;
       }
-      min-height: calc(100vh - (56px + (70px - 56px) + 1rem + 120px));
+      min-height: calc(100vh - (56px + (70px - 56px) + 1rem + 64px));
       padding: 70px 1rem 1rem;
     }
   }
@@ -124,11 +138,17 @@
     position: relative;
     line-height: 24px;
     flex: 1;
-    padding: 48px;
+    padding: 20px;
     z-index: 0;
     background-color: $primary;
     color: $very-light-grey;
     font-weight: 300;
     text-align: center;
+
+    &-copyright {
+      font-size: 12px;
+      display: flex;
+      justify-content: flex-end;
+    }
   }
 }
