@@ -1,7 +1,10 @@
 <div class="code-example-wrapper">
   <div class="code-example-header">
     <div class="code-example-header-title">{{ cardTitle }}</div>
-    <button mat-icon-button (click)="toggleShowSource()">
+    <button
+      mat-icon-button
+      [matTooltip]="showSource ? 'Hide source': 'View source'"
+      (click)="toggleShowSource()">
       <mat-icon>code</mat-icon>
     </button>
   </div>
