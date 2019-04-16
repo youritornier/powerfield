@@ -15,7 +15,9 @@ export class DocsComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private documentationService: DocumentationService
-  ) { }
+  ) {
+    this.apiDocumentation = new ApiModel();
+  }
 
   ngOnInit() {
     const directiveName: string = this.route.snapshot.params.name;

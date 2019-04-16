@@ -26,7 +26,7 @@ export class LayoutComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.mediaQuery.addListener(this.mediaQueryListener);
+    this.mediaQuery.addEventListener('resize', this.mediaQueryListener);
     this.initializeDocMenu();
   }
 

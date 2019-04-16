@@ -6,7 +6,11 @@ export class ApiModel {
   public selector: string;
   public properties: Array<PropertyModel>;
 
-  constructor(name: string, selector: string, description: string) {
+  constructor(
+    name: string = '',
+    selector: string= '',
+    description: string = ''
+  ) {
     this.name = name;
     this.selector = selector;
     this.description = description;
