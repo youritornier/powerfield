@@ -1,1 +1,1 @@
-export * from './route.adapter';
+export * from './doc-menu.adapter';
