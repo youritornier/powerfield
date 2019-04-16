@@ -50,6 +50,27 @@
           </a>
         </mat-expansion-panel>
       </div>
+
+      <div mat-list-item *ngFor="let d of docMenu">
+        <mat-expansion-panel class="layout-sidenav-expansion">
+          <mat-expansion-panel-header
+            collapsedHeight="48px"
+            expandedHeight="48px"
+            class="layout-sidenav-expansion-header">
+            <mat-panel-title>{{ d.type }}</mat-panel-title>
+          </mat-expansion-panel-header>
+
+          <a
+            mat-list-item
+            routerLink="docs/{{ d.type }}/{{ name }}"
+            routerLinkActive="layout-sidenav-link-active"
+            [routerLinkActiveOptions]="{exact: true}"
+            *ngFor="let name of d.names"
+            class="layout-sidenav-link level-2">
+            {{ name }}
+          </a>
+        </mat-expansion-panel>
+      </div>
     </mat-nav-list>
   </mat-sidenav>
 
