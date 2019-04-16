@@ -6,7 +6,7 @@ import { DocMenuModel } from '../models';
 @Injectable({
   providedIn: 'root'
 })
-export class RouteAdapter extends Adapter<DocMenuModel> {
+export class DocMenuAdapter extends Adapter<DocMenuModel> {
   public adapt(item: any): DocMenuModel {
     const docMenu = new DocMenuModel(item.type);
     item.names.map(name => docMenu.names.push(name));

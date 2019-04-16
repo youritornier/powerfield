@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 import { DocMenuModel } from '../../models';
-import { RouteAdapter } from '../../adapters';
+import { DocMenuAdapter } from '../../adapters';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +14,7 @@ export class RoutingService {
 
   constructor(
     private http: HttpClient,
-    private adapter: RouteAdapter
+    private adapter: DocMenuAdapter
   ) { }
 
   public getAll(): Observable<Array<DocMenuModel>> {
