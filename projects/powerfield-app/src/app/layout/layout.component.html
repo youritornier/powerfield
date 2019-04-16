@@ -29,28 +29,6 @@
         Getting started
       </a>
 
-      <div mat-list-item>
-        <mat-expansion-panel class="layout-sidenav-expansion">
-          <mat-expansion-panel-header
-            collapsedHeight="48px"
-            expandedHeight="48px"
-            class="layout-sidenav-expansion-header">
-            <mat-panel-title>
-              Input
-            </mat-panel-title>
-          </mat-expansion-panel-header>
-
-          <a
-            mat-list-item
-            routerLink="input/autowidth"
-            routerLinkActive="layout-sidenav-link-active"
-            [routerLinkActiveOptions]="{exact: true}"
-            class="layout-sidenav-link level-2">
-            Autowidth
-          </a>
-        </mat-expansion-panel>
-      </div>
-
       <div mat-list-item *ngFor="let d of docMenu">
         <mat-expansion-panel class="layout-sidenav-expansion">
           <mat-expansion-panel-header
