@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { ExampleModel, DocumentationModel } from '../../../models';
+import { ExampleModel, ApiModel } from '../../../models';
 import { DocumentationService } from '../../../services/documentation/documentation.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { DocumentationService } from '../../../services/documentation/documentat
 })
 export class AutowidthComponent implements OnInit {
   public examples: Array<ExampleModel>;
-  public documentation: DocumentationModel;
+  public documentation: ApiModel;
 
   constructor(private documentationService: DocumentationService) { }
 
