@@ -5,11 +5,11 @@ import { DocumentationDirective } from '../../directives/documentation/documenta
 import { AutowidthExampleComponent } from '../../pages/input/autowidth/autowidth-example.component';
 
 @Component({
-  selector: 'app-doc-example',
-  templateUrl: './doc-example.component.html',
-  styleUrls: ['./doc-example.component.scss']
+  selector: 'app-documentation-example',
+  templateUrl: './documentation-example.component.html',
+  styleUrls: ['./documentation-example.component.scss']
 })
-export class DocExampleComponent implements OnInit {
+export class DocumentationExampleComponent implements OnInit {
   @ViewChild(DocumentationDirective) docExample: DocumentationDirective;
 
   private componentMap = {
