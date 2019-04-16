@@ -17,9 +17,9 @@ export class DocumentationService {
     );
   }
 
-  public getAll(): Observable<any> {
+  public getAll(): Observable<Array<any>> {
     return this.http
-      .get<Array<any>>('./assets/data.json')
-      .pipe(map(data => data));
+      .get<any>('./assets/data.json')
+      .pipe(map(data => data.docs));
   }
 }
