@@ -19,7 +19,7 @@ export class RoutingService {
 
   public getAll(): Observable<Array<DocMenuModel>> {
     return this.http
-      .get(this.baseUrl)
+      .get<any>(this.baseUrl)
       .pipe(
         map((data: any) => this.adapter.adaptArray(data.routes))
       );

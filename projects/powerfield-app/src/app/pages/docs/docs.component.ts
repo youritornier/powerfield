@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { DocumentationModel } from '../../models';
+import { ApiModel } from '../../models';
 import { DocumentationService } from '../../services/documentation/documentation.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { DocumentationService } from '../../services/documentation/documentation
   styleUrls: ['./docs.component.scss']
 })
 export class DocsComponent implements OnInit {
-  public documentation: DocumentationModel;
+  public apiDocumentation: ApiModel;
 
   constructor(
     private route: ActivatedRoute,
@@ -20,6 +20,6 @@ export class DocsComponent implements OnInit {
   ngOnInit() {
     const directiveName: string = this.route.snapshot.params.name;
     this.documentationService.getByDirectiveName(directiveName)
-      .subscribe(d => this.documentation = d);
+      .subscribe(d => this.apiDocumentation = d);
   }
 }

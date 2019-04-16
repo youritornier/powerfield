@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { DocumentationModel } from '../../models';
+import { ApiModel } from '../../models';
 
 @Component({
   selector: 'app-documentation-api',
@@ -8,7 +8,7 @@ import { DocumentationModel } from '../../models';
   styleUrls: ['./documentation-api.component.scss']
 })
 export class DocumentationApiComponent implements OnInit {
-  @Input() documentation: DocumentationModel;
+  @Input() apiDocumentation: ApiModel;
 
   constructor() { }
 
