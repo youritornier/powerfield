@@ -1,0 +1,6 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+$primary: mat-color(mat-palette($mat-indigo, 500));
+$small-screen: 600px;
+$very-light-grey: #fafafa;

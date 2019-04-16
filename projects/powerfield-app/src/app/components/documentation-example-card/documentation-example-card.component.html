@@ -1,0 +1,22 @@
+<div class="code-example-wrapper">
+  <div class="code-example-header">
+    <div class="code-example-header-title">{{ cardTitle }}</div>
+    <button
+      mat-icon-button
+      [matTooltip]="showSource ? 'Hide source': 'View source'"
+      (click)="toggleShowSource()">
+      <mat-icon>code</mat-icon>
+    </button>
+  </div>
+
+  <div *ngIf="showSource" class="code-example-source">
+    <pre source class="code-snippet language-html">
+      <code>{{ source }}</code>
+    </pre>
+  </div>
+
+  <div class="code-example-body">
+    <ng-content></ng-content>
+  </div>
+</div>
+  

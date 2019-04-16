@@ -1,0 +1,23 @@
+{
+  "routes": [{
+    "type": "input",
+    "names": [
+      "Autowidth"
+    ]
+  }],
+  "docs": [{
+    "name": "Autowidth",
+    "selector": "powAutowidth",
+    "description": "The Autowidth Powerfield directive automatically adjusts a text input's width to its content.",
+    "properties": [{
+      "name": "@Input() powExtraWidth: number",
+      "description": "Extra space added to the input's width (in pixel)."
+    }, {
+      "name": "@Input() powMaxWidth: number",
+      "description": "Maximum size of the input (in pixel). If maximum size is 0, it is ignored."
+    }, {
+      "name": "@Input() powMinWidth: number",
+      "description": "Minimum size of the input (in pixel). If minimum size is 0, it is ignored."
+    }]
+  }]
+}
