@@ -2,7 +2,7 @@
   "routes": [{
     "type": "input",
     "names": [
-      "autowidth"
+      "Autowidth"
     ]
   }],
   "docs": [{

@@ -9,17 +9,21 @@ import { DocumentationModel } from '../../models';
   providedIn: 'root'
 })
 export class DocumentationService {
+  private baseUrl = './assets/data.json';
+
   constructor(private http: HttpClient) { }
 
   public getByDirectiveName(directiveName: string): Observable<DocumentationModel> {
     return this.getAll().pipe(
-      map(data => data.find(d => d.name === directiveName))
+      map(data => data.find(
+        d => d.name.toUpperCase() === directiveName.toUpperCase()
+      ))
     );
   }
 
   public getAll(): Observable<Array<any>> {
     return this.http
-      .get<any>('./assets/data.json')
+      .get<any>(this.baseUrl)
       .pipe(map(data => data.docs));
   }
 }
