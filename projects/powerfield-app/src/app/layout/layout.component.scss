@@ -1,0 +1,154 @@
+@import "../../styles/variables.scss";
+
+.layout {
+  &-toolbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.3);
+    padding: 0 16px 0 0;
+
+    &-link {
+      font-size: 16px;
+      font-weight: 400;
+      color: #ffffff;
+      text-transform: uppercase;
+      padding: 24px 0;
+
+      &.home {
+        margin: 0 16px 0 0;
+        padding: 21px 0;
+      }
+
+      &.github {
+        display: flex;
+        flex: 1;
+        justify-content: flex-end;
+        margin: 0 16px 0 0;
+        padding: 16px 0;
+        font-size: 14px;
+        text-transform: none;
+
+        img {
+          margin-right: 5px;
+        }
+      }
+    }
+
+    &-button {
+      margin: 0 8px 0 0;
+      height: 100%;
+      padding: 0;
+      width: 64px;
+    }
+  }
+
+  &-sidenav {
+    position: fixed;
+    top: 56px;
+    bottom: 0;
+    left: 0;
+    padding: 0;
+    min-width: 260px;
+    background-color: $very-light-grey;
+    box-shadow: 6px 0 6px rgba(0,0,0,.1);
+
+    @media (min-width: $small-screen) {
+      top: 64px;
+    }
+
+    &-link {
+      margin-left: 0!important;
+      padding-left: 6px!important;
+      box-sizing: border-box;
+
+      &:hover,
+      &-active {
+        color: $primary!important;
+      }
+
+      &.level-1 {
+        font-size: 14px!important;
+        font-weight: 400;
+        margin-left: 14px;
+        transition: background-color .2s;
+        text-transform: uppercase;
+      }
+
+      &.level-2 {
+        color: #6e6e6e;
+        font-size: 14px!important;
+        font-weight: 400;
+        margin-left: 12px;
+        text-transform: none;
+      }
+    }
+
+    &-expansion {
+      background: transparent;
+      border: none;
+      box-shadow: none;
+      border-radius: unset;
+
+      &-header {
+        font-size: 14px;
+        font-weight: 400;
+        color: #ffffff;
+        text-transform: uppercase;
+        padding-left: 22px;
+        padding-right: 16px;
+
+        &:hover {
+          .mat-expansion-panel-header-title {
+            color: $primary;
+          }
+  
+          ::ng-deep .mat-expansion-indicator:after {
+            color: $primary;
+          }
+        }
+      }
+
+      ::ng-deep .mat-expansion-panel-body {
+        padding-right: 0;
+        padding-bottom: 0;
+      }
+    }
+
+    &-container {
+      height: auto!important;
+      max-width: 100%;
+      margin: 0;
+      transform: none;
+    }
+
+    &-content {
+      @media (min-width: $small-screen) {
+        min-height: calc(100vh - (64px + (80px - 64px) + 1rem + 64px));
+        padding: 80px 3rem 1rem;
+      }
+      min-height: calc(100vh - (56px + (70px - 56px) + 1rem + 64px));
+      padding: 70px 1rem 1rem;
+    }
+  }
+
+  &-footer {
+    position: relative;
+    line-height: 24px;
+    flex: 1;
+    padding: 20px;
+    z-index: 0;
+    background-color: $primary;
+    color: $very-light-grey;
+    font-weight: 300;
+    text-align: center;
+
+    &-copyright {
+      font-size: 12px;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}

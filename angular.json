@@ -37,6 +37,142 @@
           }
         }
       }
+    },
+    "powerfield-app": {
+      "root": "projects/powerfield-app/",
+      "sourceRoot": "projects/powerfield-app/src",
+      "projectType": "application",
+      "prefix": "app",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/powerfield-app",
+            "index": "projects/powerfield-app/src/index.html",
+            "main": "projects/powerfield-app/src/main.ts",
+            "polyfills": "projects/powerfield-app/src/polyfills.ts",
+            "tsConfig": "projects/powerfield-app/tsconfig.app.json",
+            "assets": [
+              "projects/powerfield-app/src/favicon.ico",
+              "projects/powerfield-app/src/assets"
+            ],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "projects/powerfield-app/src/styles/styles.scss",
+              "projects/powerfield-app/src/styles/variables.scss"
+            ],
+            "scripts": [],
+            "es5BrowserSupport": true
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/powerfield-app/src/environments/environment.ts",
+                  "with": "projects/powerfield-app/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "powerfield-app:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "powerfield-app:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "powerfield-app:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/powerfield-app/src/test.ts",
+            "polyfills": "projects/powerfield-app/src/polyfills.ts",
+            "tsConfig": "projects/powerfield-app/tsconfig.spec.json",
+            "karmaConfig": "projects/powerfield-app/karma.conf.js",
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "projects/powerfield-app/src/styles/styles.scss",
+              "projects/powerfield-app/src/styles/variables.scss"
+            ],
+            "scripts": [],
+            "assets": [
+              "projects/powerfield-app/src/favicon.ico",
+              "projects/powerfield-app/src/assets"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/powerfield-app/tsconfig.app.json",
+              "projects/powerfield-app/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "powerfield-app-e2e": {
+      "root": "projects/powerfield-app-e2e/",
+      "projectType": "application",
+      "prefix": "",
+      "architect": {
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/powerfield-app-e2e/protractor.conf.js",
+            "devServerTarget": "powerfield-app:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "powerfield-app:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "projects/powerfield-app-e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "powerfield"
