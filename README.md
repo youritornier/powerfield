@@ -32,5 +32,8 @@ You can use every provided directives directly in your component templates. Here
 <input type="text" powAutoWidth [powExtraWidth]="20" />
 ```
 
+# Authors
+Find all Powerfield authors [here](AUTHORS).
+
 # License
 Powerfield is [MIT licensed](LICENSE).
