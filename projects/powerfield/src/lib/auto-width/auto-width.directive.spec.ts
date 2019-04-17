@@ -3,7 +3,7 @@ import { async, TestBed } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
 
 import { ElementInputHelper, ElementInputHelperFactory } from '../testing';
-import { AutowidthDirective } from './autowidth.directive';
+import { AutowidthDirective } from './auto-width.directive';
 
 const powExtraWidth = 50;
 const powMaxWidth = 50;

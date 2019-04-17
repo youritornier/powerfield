@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { async, TestBed } from '@angular/core/testing';
 
 import { ElementInputHelper, ElementInputHelperFactory } from '../testing';
-import { AutoselectDirective } from './autoselect.directive';
+import { AutoselectDirective } from './auto-select.directive';
 
 @Component({
   template:

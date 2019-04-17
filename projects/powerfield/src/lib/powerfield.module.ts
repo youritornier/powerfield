@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 
-import { AutoselectDirective } from './autoselect/autoselect.directive';
-import { AutowidthDirective } from './autowidth/autowidth.directive';
+import { AutoselectDirective } from './auto-select/auto-select.directive';
+import { AutowidthDirective } from './auto-width/auto-width.directive';
 
 @NgModule({
   declarations: [
