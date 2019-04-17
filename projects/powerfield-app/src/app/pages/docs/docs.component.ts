@@ -22,8 +22,9 @@ export class DocsComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.subscribe(() => {
+      // On route parameter change load the corresponding ApiModel.
       this.loadApi();
-      // Reset the selectedTabIndex to the first tab.
+      // On route parameter change reset the selectedTabIndex to the first tab.
       this.selectedTabIndex = 0;
     });
   }

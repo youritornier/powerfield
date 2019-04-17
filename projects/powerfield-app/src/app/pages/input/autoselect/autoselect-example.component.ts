@@ -6,10 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./autoselect-example.component.scss']
 })
 export class AutoselectExampleComponent implements OnInit {
-
   constructor() { }
 
-  ngOnInit() {
-  }
-
+  ngOnInit() { }
 }

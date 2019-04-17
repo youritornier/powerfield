@@ -24,6 +24,7 @@ export class DocumentationExampleComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    // On route parameter change load the corresponding component.
     this.route.params.subscribe(() => this.loadComponent());
   }
 
