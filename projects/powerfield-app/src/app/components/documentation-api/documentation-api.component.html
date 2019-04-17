@@ -1,0 +1,20 @@
+<h2>API reference for Powerfield {{ apiDocumentation.name }} directive</h2>
+
+<h3>{{ apiDocumentation.selector }}</h3>
+<p>{{ apiDocumentation.description }}</p>
+
+<h4>Properties</h4>
+<table class="api-table">
+  <thead>
+    <tr><th>Name</th><th>Description</th></tr>
+  </thead>
+  <tbody *ngIf="apiDocumentation.properties.length > 0; else empty">
+    <tr *ngFor="let property of apiDocumentation.properties">
+      <td><code>{{ property.name }}</code></td>
+      <td>{{ property.description }}</td>
+    </tr>
+  </tbody>
+  <ng-template #empty>
+    <td colspan="2" class="api-table-empty">No property</td>
+  </ng-template>
+</table>

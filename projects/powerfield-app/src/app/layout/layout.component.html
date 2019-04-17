@@ -1,0 +1,68 @@
+<mat-toolbar color="primary" class="layout-toolbar">
+  <button
+    mat-icon-button
+    (click)="sidenav.toggle()"
+    title="Menu"
+    class="layout-toolbar-button">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <a routerLink="/" title="Home" class="layout-toolbar-link home">
+    Powerfield
+  </a>
+  <a href="https://github.com/youritornier/powerfield" class="layout-toolbar-link github">
+    <img src="./assets/GitHub-Mark-Light-32px.png" height="24" width="24" />GitHub
+  </a>
+</mat-toolbar>
+
+<mat-sidenav-container class="layout-sidenav-container">
+  <mat-sidenav #sidenav
+    [mode]="mediaQuery.matches ? 'over' : 'side'"
+    [opened]="!mediaQuery.matches"
+    class="layout-sidenav collapsed">
+    <mat-nav-list>
+      <a
+        mat-list-item
+        routerLink="quickstart"
+        routerLinkActive="layout-sidenav-link-active"
+        [routerLinkActiveOptions]="{exact: true}"
+        class="layout-sidenav-link level-1">
+        Getting started
+      </a>
+
+      <div mat-list-item *ngFor="let d of docMenu">
+        <mat-expansion-panel class="layout-sidenav-expansion">
+          <mat-expansion-panel-header
+            collapsedHeight="48px"
+            expandedHeight="48px"
+            class="layout-sidenav-expansion-header">
+            <mat-panel-title>{{ d.type }}</mat-panel-title>
+          </mat-expansion-panel-header>
+
+          <a
+            mat-list-item
+            routerLink="docs/{{ d.type | lowercase }}/{{ name | lowercase }}"
+            routerLinkActive="layout-sidenav-link-active"
+            [routerLinkActiveOptions]="{exact: true}"
+            *ngFor="let name of d.names"
+            class="layout-sidenav-link level-2">
+            {{ name }}
+          </a>
+        </mat-expansion-panel>
+      </div>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <main class="layout-sidenav-content">
+      <div class="content">
+        <router-outlet></router-outlet>
+      </div>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<footer class="layout-footer">
+  <div class="layout-footer-copyright">
+    Powerfield documentation - Copyright © 2019 Youri Tornier
+  </div>
+</footer>

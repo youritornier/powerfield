@@ -1,0 +1,37 @@
+language: node_js
+
+node_js:
+  - '10'
+
+branches:
+  only:
+  - master
+  - develop
+
+install:
+  - npm install
+
+cache:
+  directories:
+    - node_modules
+
+script:
+  - npm run lint
+  - npm run test-ci
+  - npm run build --prod --project powerfield
+  - ng build --prod --base-href https://youritornier.github.io/powerfield/ --project=powerfield-app
+
+deploy:
+- provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: dist/powerfield-app
+  on:
+    branch: master
+- provider: npm
+  skip_cleanup: true
+  email: $NPM_EMAIL
+  api_key: $NPM_TOKEN
+  local_dir: dist/powerfield
+  on:
+    branch: master
