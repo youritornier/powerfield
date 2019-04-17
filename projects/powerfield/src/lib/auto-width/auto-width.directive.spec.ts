@@ -3,7 +3,7 @@ import { async, TestBed } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
 
 import { ElementInputHelper, ElementInputHelperFactory } from '../testing';
-import { AutowidthDirective } from './auto-width.directive';
+import { AutoWidthDirective } from './auto-width.directive';
 
 const powExtraWidth = 50;
 const powMaxWidth = 50;
@@ -30,7 +30,7 @@ class MockComponent implements OnInit {
   }
 }
 
-describe('AutowidthDirective', () => {
+describe('AutoWidthDirective', () => {
   let elHelper: ElementInputHelper<MockComponent>;
   let elExtraHelper: ElementInputHelper<MockComponent>;
   let elMaxHelper: ElementInputHelper<MockComponent>;
@@ -44,7 +44,7 @@ describe('AutowidthDirective', () => {
         FormsModule,
       ],
       declarations: [
-        AutowidthDirective,
+        AutoWidthDirective,
         MockComponent
       ]
     }).compileComponents();

@@ -3,7 +3,7 @@ import { Directive, ElementRef, HostListener } from '@angular/core';
 @Directive({
   selector: '[powAutoselect]'
 })
-export class AutoselectDirective {
+export class AutoSelectDirective {
   constructor(private el: ElementRef) { }
 
   @HostListener('click', ['$event.target']) onclick() {
