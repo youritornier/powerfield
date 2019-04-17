@@ -1,4 +1,4 @@
-# Powerfield
+# [Powerfield](https://youritornier.github.io/powerfield/)
 
 Powerfield is a npm package regrouping useful form fields directive for Angular projects. The Powerfield aim is to deliver modularity and performance in your Angular projects. Powerfield helps you with common needed Angular input directives.
 
