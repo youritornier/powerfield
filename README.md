@@ -1,27 +1,36 @@
 # Powerfield
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.6.
+Powerfield is a npm package regrouping useful form fields directive for Angular projects. The Powerfield aim is to deliver modularity and performance in your Angular projects. Powerfield helps you with common needed Angular input directives.
 
-## Development server
+# Installation
+To install the Powerfield package in your project using npm, open a terminal/console window and enter the following command:
+```
+npm install powerfield
+```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+To import the installed package to your module, open your module file and edit it as follow:
+```typescript
+import { PowerfieldModule } from 'powerfield';
 
-## Code scaffolding
+@NgModule({
+  ...
+  imports: [
+    ...
+    PowerfieldModule,
+  ],
+  ...
+})
+...
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# Documentation
+You can find the full Powerfield documentation [here](https://youritornier.github.io/powerfield/). This documentation contains a description of every Powerfield directives and related examples.
 
-## Build
+# Examples
+You can use every provided directives directly in your component templates. Here is an example of the use of the powAutoWidth directive:
+```html
+<input type="text" powAutoWidth [powExtraWidth]="20" />
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+# License
+Powerfield is [MIT licensed](LICENSE).
