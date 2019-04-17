@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AutoselectExampleComponent } from './autoselect-example.component';
+import { AutoselectExampleComponent } from './auto-select-example.component';
 
 describe('AutoselectExampleComponent', () => {
   let component: AutoselectExampleComponent;

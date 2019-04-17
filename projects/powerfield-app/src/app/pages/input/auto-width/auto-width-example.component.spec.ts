@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AutowidthExampleComponent } from './autowidth-example.component';
+import { AutowidthExampleComponent } from './auto-width-example.component';
 
 describe('AutowidthExampleComponent', () => {
   let component: AutowidthExampleComponent;

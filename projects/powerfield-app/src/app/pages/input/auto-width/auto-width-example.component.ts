@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-autowidth-example',
-  templateUrl: './autowidth-example.component.html',
-  styleUrls: ['./autowidth-example.component.scss']
+  selector: 'app-auto-width-example',
+  templateUrl: './auto-width-example.component.html',
+  styleUrls: ['./auto-width-example.component.scss']
 })
 export class AutowidthExampleComponent implements OnInit {
   constructor() { }
