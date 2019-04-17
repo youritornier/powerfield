@@ -10,7 +10,7 @@ import {
 } from '@angular/core';
 
 @Directive({
-  selector: '[powAutowidth]'
+  selector: '[powAutoWidth]'
 })
 export class AutoWidthDirective implements AfterContentChecked, OnDestroy, OnInit {
   // Width (in px) to add to the input's width content

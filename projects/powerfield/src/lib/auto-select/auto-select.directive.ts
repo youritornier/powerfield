@@ -1,7 +1,7 @@
 import { Directive, ElementRef, HostListener } from '@angular/core';
 
 @Directive({
-  selector: '[powAutoselect]'
+  selector: '[powAutoSelect]'
 })
 export class AutoSelectDirective {
   constructor(private el: ElementRef) { }

@@ -6,7 +6,7 @@ import { AutoSelectDirective } from './auto-select.directive';
 
 @Component({
   template:
-    '<input id="autoSelect" type="text" value="This is a text" powAutoselect>'
+    '<input id="autoSelect" type="text" value="This is a text" powAutoSelect>'
 })
 class MockComponent {
   constructor() { }
