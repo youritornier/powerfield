@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 
-import { AutoselectDirective } from './autoselect/autoselect.directive';
-import { AutowidthDirective } from './autowidth/autowidth.directive';
+import { AutoSelectDirective } from './auto-select/auto-select.directive';
+import { AutoWidthDirective } from './auto-width/auto-width.directive';
 
 @NgModule({
   declarations: [
-    AutoselectDirective,
-    AutowidthDirective
+    AutoSelectDirective,
+    AutoWidthDirective
   ],
   imports: [],
   exports: [
-    AutoselectDirective,
-    AutowidthDirective
+    AutoSelectDirective,
+    AutoWidthDirective
   ]
 })
 export class PowerfieldModule { }

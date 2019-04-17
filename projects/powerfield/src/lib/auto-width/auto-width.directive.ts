@@ -10,9 +10,9 @@ import {
 } from '@angular/core';
 
 @Directive({
-  selector: '[powAutowidth]'
+  selector: '[powAutoWidth]'
 })
-export class AutowidthDirective implements AfterContentChecked, OnDestroy, OnInit {
+export class AutoWidthDirective implements AfterContentChecked, OnDestroy, OnInit {
   // Width (in px) to add to the input's width content
   @Input() powExtraWidth = 0;
   // Maximal input's width

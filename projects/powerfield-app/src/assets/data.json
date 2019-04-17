@@ -2,14 +2,14 @@
   "routes": [{
     "type": "input",
     "names": [
-      "Autoselect",
-      "Autowidth"
+      "AutoSelect",
+      "AutoWidth"
     ]
   }],
   "docs": [{
-    "name": "Autowidth",
-    "selector": "powAutowidth",
-    "description": "The Autowidth Powerfield directive automatically adjusts a text input's width to its content.",
+    "name": "AutoWidth",
+    "selector": "powAutoWidth",
+    "description": "The AutoWidth Powerfield directive automatically adjusts a text input's width to its content.",
     "properties": [{
       "name": "@Input() powExtraWidth: number",
       "description": "Extra space added to the input's width (in pixel)."
@@ -21,9 +21,9 @@
       "description": "Minimum size of the input (in pixel). If minimum size is 0, it is ignored."
     }]
   }, {
-    "name": "Autoselect",
-    "selector": "powAutoselect",
-    "description": "The Autoselect Powerfield directive automatically select text content on click.",
+    "name": "AutoSelect",
+    "selector": "powAutoSelect",
+    "description": "The AutoSelect Powerfield directive automatically select text content on click.",
     "properties": []
   }]
 }

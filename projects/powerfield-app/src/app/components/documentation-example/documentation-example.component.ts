@@ -2,8 +2,8 @@ import { Component, ComponentFactoryResolver, OnInit, ViewChild, ViewContainerRe
 import { ActivatedRoute } from '@angular/router';
 
 import { DocumentationDirective } from '../../directives/documentation/documentation.directive';
-import { AutoselectExampleComponent } from '../../pages/input/autoselect/autoselect-example.component';
-import { AutowidthExampleComponent } from '../../pages/input/autowidth/autowidth-example.component';
+import { AutoSelectExampleComponent } from '../../pages/input/auto-select/auto-select-example.component';
+import { AutoWidthExampleComponent } from '../../pages/input/auto-width/auto-width-example.component';
 
 @Component({
   selector: 'app-documentation-example',
@@ -14,8 +14,8 @@ export class DocumentationExampleComponent implements OnInit {
   @ViewChild(DocumentationDirective) docExample: DocumentationDirective;
 
   private componentMap = {
-    autowidth: AutowidthExampleComponent,
-    autoselect: AutoselectExampleComponent
+    autowidth: AutoWidthExampleComponent,
+    autoselect: AutoSelectExampleComponent
   };
 
   constructor(

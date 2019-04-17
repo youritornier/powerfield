@@ -3,7 +3,7 @@ import { async, TestBed } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
 
 import { ElementInputHelper, ElementInputHelperFactory } from '../testing';
-import { AutowidthDirective } from './autowidth.directive';
+import { AutoWidthDirective } from './auto-width.directive';
 
 const powExtraWidth = 50;
 const powMaxWidth = 50;
@@ -11,14 +11,14 @@ const powMinWidth = 100;
 
 @Component({
   template:
-    `<input id="autoWidth" type="text" value="text" powAutowidth>
-    <input id="autoWidthExtra" type="text" value="text" powAutowidth [powExtraWidth]="${powExtraWidth}">
+    `<input id="autoWidth" type="text" value="text" powAutoWidth>
+    <input id="autoWidthExtra" type="text" value="text" powAutoWidth [powExtraWidth]="${powExtraWidth}">
     <!-- #autoWidthMax is box-sizing: border-box; to verify max-width with padding and borders -->
-    <input id="autoWidthMax" type="text" value="text" style="box-sizing: border-box;" powAutowidth [powMaxWidth]="${powMaxWidth}">
+    <input id="autoWidthMax" type="text" value="text" style="box-sizing: border-box;" powAutoWidth [powMaxWidth]="${powMaxWidth}">
     <!-- #autoWidthMin is box-sizing: border-box; to verify min-width with padding and borders -->
-    <input id="autoWidthMin" type="text" value="text" style="box-sizing: border-box;" powAutowidth [powMinWidth]="${powMinWidth}">
-    <input id="autoWidthPlaceholder" placeholder="This is a placeholder" powAutowidth>
-    <input id="autoWidthNgModel" type="text" [(ngModel)]="text" powAutowidth>`
+    <input id="autoWidthMin" type="text" value="text" style="box-sizing: border-box;" powAutoWidth [powMinWidth]="${powMinWidth}">
+    <input id="autoWidthPlaceholder" placeholder="This is a placeholder" powAutoWidth>
+    <input id="autoWidthNgModel" type="text" [(ngModel)]="text" powAutoWidth>`
 })
 class MockComponent implements OnInit {
   public text: string;
@@ -30,7 +30,7 @@ class MockComponent implements OnInit {
   }
 }
 
-describe('AutowidthDirective', () => {
+describe('AutoWidthDirective', () => {
   let elHelper: ElementInputHelper<MockComponent>;
   let elExtraHelper: ElementInputHelper<MockComponent>;
   let elMaxHelper: ElementInputHelper<MockComponent>;
@@ -44,7 +44,7 @@ describe('AutowidthDirective', () => {
         FormsModule,
       ],
       declarations: [
-        AutowidthDirective,
+        AutoWidthDirective,
         MockComponent
       ]
     }).compileComponents();

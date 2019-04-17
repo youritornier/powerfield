@@ -2,23 +2,23 @@ import { Component } from '@angular/core';
 import { async, TestBed } from '@angular/core/testing';
 
 import { ElementInputHelper, ElementInputHelperFactory } from '../testing';
-import { AutoselectDirective } from './autoselect.directive';
+import { AutoSelectDirective } from './auto-select.directive';
 
 @Component({
   template:
-    '<input id="autoSelect" type="text" value="This is a text" powAutoselect>'
+    '<input id="autoSelect" type="text" value="This is a text" powAutoSelect>'
 })
 class MockComponent {
   constructor() { }
 }
 
-describe('AutoselectDirective', () => {
+describe('AutoSelectDirective', () => {
   let elHelper: ElementInputHelper<MockComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AutoselectDirective,
+        AutoSelectDirective,
         MockComponent
       ]
     }).compileComponents();
