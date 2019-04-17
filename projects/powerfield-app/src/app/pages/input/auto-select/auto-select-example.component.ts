@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './auto-select-example.component.html',
   styleUrls: ['./auto-select-example.component.scss']
 })
-export class AutoselectExampleComponent implements OnInit {
+export class AutoSelectExampleComponent implements OnInit {
   constructor() { }
 
   ngOnInit() { }

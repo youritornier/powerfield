@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AutowidthExampleComponent } from './auto-width-example.component';
+import { AutoWidthExampleComponent } from './auto-width-example.component';
 
-describe('AutowidthExampleComponent', () => {
-  let component: AutowidthExampleComponent;
-  let fixture: ComponentFixture<AutowidthExampleComponent>;
+describe('AutoWidthExampleComponent', () => {
+  let component: AutoWidthExampleComponent;
+  let fixture: ComponentFixture<AutoWidthExampleComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AutowidthExampleComponent ]
+      declarations: [ AutoWidthExampleComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AutowidthExampleComponent);
+    fixture = TestBed.createComponent(AutoWidthExampleComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

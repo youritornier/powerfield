@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './auto-width-example.component.html',
   styleUrls: ['./auto-width-example.component.scss']
 })
-export class AutowidthExampleComponent implements OnInit {
+export class AutoWidthExampleComponent implements OnInit {
   constructor() { }
 
   ngOnInit() { }

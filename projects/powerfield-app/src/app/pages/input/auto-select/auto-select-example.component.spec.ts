@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AutoselectExampleComponent } from './auto-select-example.component';
+import { AutoSelectExampleComponent } from './auto-select-example.component';
 
-describe('AutoselectExampleComponent', () => {
-  let component: AutoselectExampleComponent;
-  let fixture: ComponentFixture<AutoselectExampleComponent>;
+describe('AutoSelectExampleComponent', () => {
+  let component: AutoSelectExampleComponent;
+  let fixture: ComponentFixture<AutoSelectExampleComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AutoselectExampleComponent ]
+      declarations: [ AutoSelectExampleComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AutoselectExampleComponent);
+    fixture = TestBed.createComponent(AutoSelectExampleComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
