@@ -2,6 +2,7 @@ import { Component, ComponentFactoryResolver, OnInit, ViewChild, ViewContainerRe
 import { ActivatedRoute } from '@angular/router';
 
 import { DocumentationDirective } from '../../directives/documentation/documentation.directive';
+import { AutoselectExampleComponent } from '../../pages/input/autoselect/autoselect-example.component';
 import { AutowidthExampleComponent } from '../../pages/input/autowidth/autowidth-example.component';
 
 @Component({
@@ -13,7 +14,8 @@ export class DocumentationExampleComponent implements OnInit {
   @ViewChild(DocumentationDirective) docExample: DocumentationDirective;
 
   private componentMap = {
-    autowidth: AutowidthExampleComponent
+    autowidth: AutowidthExampleComponent,
+    autoselect: AutoselectExampleComponent
   };
 
   constructor(
@@ -22,10 +24,11 @@ export class DocumentationExampleComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.loadComponent();
+    // On route parameter change load the corresponding component.
+    this.route.params.subscribe(() => this.loadComponent());
   }
 
-  private loadComponent() {
+  private loadComponent(): void {
     const directiveName = this.route.snapshot.params.name;
     const componentFactory = this.componentFactoryResolver
       .resolveComponentFactory(this.componentMap[directiveName]);
