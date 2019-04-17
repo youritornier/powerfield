@@ -2,6 +2,7 @@
   "routes": [{
     "type": "input",
     "names": [
+      "Autoselect",
       "Autowidth"
     ]
   }],
@@ -19,5 +20,10 @@
       "name": "@Input() powMinWidth: number",
       "description": "Minimum size of the input (in pixel). If minimum size is 0, it is ignored."
     }]
+  }, {
+    "name": "Autoselect",
+    "selector": "powAutoselect",
+    "description": "The Autoselect Powerfield directive automatically select text content on click.",
+    "properties": []
   }]
 }
