@@ -8,10 +8,13 @@
   <thead>
     <tr><th>Name</th><th>Description</th></tr>
   </thead>
-  <tbody>
+  <tbody *ngIf="apiDocumentation.properties.length > 0; else empty">
     <tr *ngFor="let property of apiDocumentation.properties">
       <td><code>{{ property.name }}</code></td>
       <td>{{ property.description }}</td>
     </tr>
   </tbody>
+  <ng-template #empty>
+    <td colspan="2" class="api-table-empty">No property</td>
+  </ng-template>
 </table>
