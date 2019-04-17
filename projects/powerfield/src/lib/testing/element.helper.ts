@@ -20,3 +20,6 @@ export class ElementInputHelper<T> extends ElementHelper<T, HTMLInputElement> {
     });
   }
 }
+
+export class ElementTextAreaHelper<T>
+  extends ElementHelper<T, HTMLTextAreaElement> { }
