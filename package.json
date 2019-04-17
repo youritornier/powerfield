@@ -1,6 +1,8 @@
 {
   "name": "powerfield",
   "version": "1.0.0",
+  "author": "Youri Tornier",
+  "license": "MIT",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
