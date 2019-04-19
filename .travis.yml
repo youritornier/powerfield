@@ -18,20 +18,24 @@ cache:
 script:
   - npm run lint
   - npm run test-ci
-  - npm run build --prod --project powerfield
-  - ng build --prod --base-href https://youritornier.github.io/powerfield/ --project=powerfield-app
+  - ng build --project powerfield
+  - ng build --prod --base-href https://youritornier.github.io/powerfield/ --project powerfield-app
 
-deploy:
-- provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN
-  local_dir: dist/powerfield-app
-  on:
-    branch: master
-- provider: npm
-  skip_cleanup: true
-  email: $NPM_EMAIL
-  api_key: $NPM_TOKEN
-  local_dir: dist/powerfield
-  on:
-    branch: master
+matrix:
+  include:
+    - deploy:
+      provider: pages
+      skip_cleanup: true
+      github_token: $GITHUB_TOKEN
+      local_dir: dist/powerfield-app
+      on:
+        branch: master
+    - before_deploy:
+        cd projects/powerfield
+      deploy:
+        provider: npm
+        skip_cleanup: true
+        email: $NPM_EMAIL
+        api_key: $NPM_TOKEN
+        on:
+          branch: master
