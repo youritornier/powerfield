@@ -15,22 +15,28 @@ cache:
   directories:
     - node_modules
 
-script:
-  - npm run lint
-  - npm run test-ci
-  - ng build --project powerfield
-  - ng build --prod --base-href https://youritornier.github.io/powerfield/ --project powerfield-app
-
 matrix:
   include:
-    - deploy:
-      provider: pages
-      skip_cleanup: true
-      github_token: $GITHUB_TOKEN
-      local_dir: dist/powerfield-app
-      on:
-        branch: master
-    - before_deploy:
+    - before_script:
+        echo "Running travis-ci for powerfield-app"
+      script:
+        - npm run lint --project powerfield-app
+        - ng build --project powerfield
+        - ng build --prod --base-href https://youritornier.github.io/powerfield/ --project powerfield-app
+      deploy:
+        provider: pages
+        skip_cleanup: true
+        github_token: $GITHUB_TOKEN
+        local_dir: dist/powerfield-app
+        on:
+          branch: master
+    - before_script:
+        echo "Running travis-ci for powerfield"
+      script:
+        - npm run lint --project powerfield
+        - npm run test-ci
+        - ng build --project powerfield
+      before_deploy:
         cd projects/powerfield
       deploy:
         provider: npm
