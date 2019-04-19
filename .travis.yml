@@ -18,9 +18,10 @@ cache:
 matrix:
   include:
     - before_script:
-        echo "Running powerfield-app"
+        echo "Running travis-ci for powerfield-app"
       script:
         - npm run lint --project powerfield-app
+        - ng build --project powerfield
         - ng build --prod --base-href https://youritornier.github.io/powerfield/ --project powerfield-app
       deploy:
         provider: pages
@@ -30,7 +31,7 @@ matrix:
         on:
           branch: master
     - before_script:
-        echo "Running powerfield"
+        echo "Running travis-ci for powerfield"
       script:
         - npm run lint --project powerfield
         - npm run test-ci
