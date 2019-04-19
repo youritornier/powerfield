@@ -37,7 +37,7 @@ matrix:
         - npm run test-ci
         - ng build --project powerfield
       before_deploy:
-        cd projects/powerfield
+        cd dist/powerfield
       deploy:
         provider: npm
         skip_cleanup: true
