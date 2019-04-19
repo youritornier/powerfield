@@ -30,7 +30,7 @@ matrix:
       local_dir: dist/powerfield-app
       on:
         branch: master
-    - before_script:
+    - before_deploy:
         cd projects/powerfield
       deploy:
         provider: npm
