@@ -1,5 +1,5 @@
 import {
-  AfterViewInit,
+  AfterContentChecked,
   Directive,
   ElementRef,
   HostListener,
@@ -12,7 +12,7 @@ import {
 @Directive({
   selector: '[powAutoWidth]'
 })
-export class AutoWidthDirective implements AfterViewInit, OnDestroy, OnInit {
+export class AutoWidthDirective implements AfterContentChecked, OnDestroy, OnInit {
   // Width (in px) to add to the input's width content
   @Input() powExtraWidth = 0;
   // Maximal input's width
@@ -27,7 +27,7 @@ export class AutoWidthDirective implements AfterViewInit, OnDestroy, OnInit {
     this.input = el.nativeElement as HTMLInputElement;
   }
 
-  ngAfterViewInit(): void {
+  ngAfterContentChecked(): void {
     this.buildTwin();
     this.adjustWidth();
   }
