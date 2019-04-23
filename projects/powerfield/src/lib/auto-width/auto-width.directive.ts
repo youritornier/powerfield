@@ -1,5 +1,5 @@
 import {
-  AfterContentChecked,
+  AfterViewInit,
   Directive,
   ElementRef,
   HostListener,
@@ -12,7 +12,7 @@ import {
 @Directive({
   selector: '[powAutoWidth]'
 })
-export class AutoWidthDirective implements AfterContentChecked, OnDestroy, OnInit {
+export class AutoWidthDirective implements AfterViewInit, OnDestroy, OnInit {
   // Width (in px) to add to the input's width content
   @Input() powExtraWidth = 0;
   // Maximal input's width
@@ -23,11 +23,11 @@ export class AutoWidthDirective implements AfterContentChecked, OnDestroy, OnIni
   private input: HTMLInputElement;
   private twin: HTMLSpanElement;
 
-  constructor(el: ElementRef, public renderer: Renderer2) {
+  constructor(el: ElementRef, private renderer: Renderer2) {
     this.input = el.nativeElement as HTMLInputElement;
   }
 
-  ngAfterContentChecked(): void {
+  ngAfterViewInit(): void {
     this.buildTwin();
     this.adjustWidth();
   }
@@ -46,9 +46,12 @@ export class AutoWidthDirective implements AfterContentChecked, OnDestroy, OnIni
   }
 
   /**
-   * Build a twin component of the input width the same style.
+   * Build a twin component of the input with the same style.
    */
   private buildTwin(): void {
+    if (this.twin) {
+      document.body.removeChild(this.twin);
+    }
     const style = window.getComputedStyle(this.input);
     this.twin = document.createElement('span');
 
